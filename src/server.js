@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 
     return next()
 })
+
 //GET, POST, PUT, DELETE
 
 // req.query = Acessar query params (para filtros)
@@ -38,6 +39,7 @@ app.use((req, res, next) => {
 // req.body = Acessar corpo da requisicao (para criacao, edicao)
 
 //JSON VIEWER
+
 app.use(cors())
 app.use(express.json())
 app.use('/files', express.static(path.resolve(__dirname, '..', 'upload')))
